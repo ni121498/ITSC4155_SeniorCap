@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+{% load static %}
+
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainSite/index.css' %}">
     <title>Re-EnCode</title>
 </head>
 <body>
@@ -19,5 +22,22 @@
             </ul>
         </nav>
     </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+    {% if modules_list %}
+    <ul>
+    {% for module in modules_list %}
+        <li><a href="/home/{{ module.module_number }}/">{{ module.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No modules are available.</p>
+{% endif %}
+    </div>
+    
+    
 </body>
 </html>
