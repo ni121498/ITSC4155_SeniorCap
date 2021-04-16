@@ -12,4 +12,5 @@ urlpatterns = [
     path('languages/', views.languages, name='languages'),
 
     path('cheatsheet/', views.cheatsheet, name='cheatsheet'),
+    path('signup/', views.SignUpView.as_view(), name='signup'),
 ]
