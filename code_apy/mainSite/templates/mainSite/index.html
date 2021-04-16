@@ -17,10 +17,19 @@
             <span><a href="/languages">Languages</a></span>
             <span><a href="/cheatsheet">Cheat Sheet</a></span>
             <span class="about"><a href="#">About</a></span>
+            <span>{% if user.is_authenticated %}
+                      <p><a href="{% url 'logout' %}">Log Out</a></p>
+                    {% else %}
+                         <a href="{% url 'login' %}">Log In</a>
+                    {% endif %}
+                    </span>
         </nav>
     </header>
     <div class="main main_homepage">
         <div class="banner_homepage">
+        {% if user.is_authenticated %}
+            <h1>Hi {{ user.username }}!</h1>
+        {% endif %}
             <h1>Confused on basic programming concepts?</h1>
             <p>We have explanations on basic C++, Java, and Python concepts!</p>
         </div>
