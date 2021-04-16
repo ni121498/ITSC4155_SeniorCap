@@ -27,10 +27,13 @@
     <div class="main main_homepage">
         <div class="banner_homepage">
         {% if user.is_authenticated %}
-            <h1>Hi {{ user.username }}!</h1>
-        {% endif %}
-            <h1>Confused on basic programming concepts?</h1>
+                       <h1>Hi {{ user.username }}!</h1>
+                      {% else %}
+                    <h1>Confused on basic programming concepts?</h1>
             <p>We have explanations on basic C++, Java, and Python concepts!</p>
+                       
+                    {% endif %}
+     
         </div>
         <div class="banner_image">
             <img src="{% static 'mainSite/images/homepage_g.png' %}">
