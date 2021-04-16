@@ -13,12 +13,16 @@
 <body>
     <script src="index.js"></script>
     <header>
-        <h1 class="site-name">Code-<span>apy</span></h1>
+        <h1 class="site-name"><a href="/home">Code-<span>apy</span></a></h1>
         <nav class="nav-items">
-            <span><a href="/home">Home</a></span>
             <span class="lang"><a href="/languages">Languages</a></span>
             <span class="cs"><a href="/cheatsheet">Cheat Sheet</a></span>
-            <span class="about"><a href="#">About</a></span>
+            <span>{% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Log Out</a>
+              {% else %}
+                   <a href="{% url 'login' %}">Log In</a>
+              {% endif %}
+              </span>
         </nav>
     </header>
     <div class="main main_lang">

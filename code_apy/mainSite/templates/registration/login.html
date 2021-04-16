@@ -13,7 +13,7 @@
 <body>
     <script src="index.js"></script>
     <header>
-        <h1 class="site-name">Code-<span>apy</span></h1>
+        <h1 class="site-name"><a href="/home">Code-<span>apy</span></a></h1>
         <nav class="nav-items">
             <span><a href="/home">Home</a></span>
             <span class="lang"><a href="/languages">Languages</a></span>
@@ -21,13 +21,15 @@
             <span class="about"><a href="#">About</a></span>
         </nav>
     </header>
-    <div class="main main_lang">
-       <h2>Log In</h2>
-       <form method="post">
-           {% csrf_token %}
-           {{ form.as_p }}
-           <button type="submit">Log In</button>
-       </form>
+    <div class="main main_login">
+        <div class="login_form">
+            <h2>Log In</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="login_btn" type="submit">Log In</button>
+            </form>
+        </div>
     </div>
 
 </body>
