@@ -18,7 +18,7 @@
             <span><a href="/cheatsheet">Cheat Sheet</a></span>
             <span class="about"><a href="#">About</a></span>
             <span>{% if user.is_authenticated %}
-                      <p><a href="{% url 'logout' %}">Log Out</a></p>
+                      <a href="{% url 'logout' %}">Log Out</a>
                     {% else %}
                          <a href="{% url 'login' %}">Log In</a>
                     {% endif %}
