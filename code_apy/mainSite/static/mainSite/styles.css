@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    background-color: hsl(187, 100%, 93%);
+    padding: 0;
+    margin: 0;
+}
+
+/* ----------navigation section------------ */
+header,
+.site-name,
+.site-name span,
+.nav-items,
+.nav-items span,
+.nav-items a {
+    background-color: hsl(176, 46.3%, 57.6%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.site-name span {
+    color: rgb(94, 42, 231);
+}
+
+.site-name {
+    color: hsl(200, 4%, 11%);
+    /* margin-right: auto; */
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 10%;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid hsl(200, 4%, 11%);
+}
+
+.nav-items {
+    list-style-type: none;
+    padding: 0px 20px;
+}
+
+.nav-items span {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-items a {
+    color: hsl(200, 4%, 11%);
+    text-decoration: none;
+}
+
+.nav-items a:hover {
+    color: hsla(200, 4%, 11%, 0.7);
+}
+
+/* ------------Main Section------------- */
+.main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 8%;
+    color: hsl(200, 4%, 11%);
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* -------------------mobile------------------- */
+
+@media screen and (max-width: 1024px) {
+    .main {
+        padding-top: 10%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .main {
+        padding-top: 20%;
+    }
+}
+
+/* -------------Cheat Sheet-------------- */
+
+.cs-title {
+    letter-spacing: 3px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: hsl(200, 4%, 11%);
+    color: hsl(176, 46.3%, 57.6%);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: hsl(176, 46.3%, 57.6%);
+    color: hsl(200, 4%, 11%);
+  }
+  
+  .dropdown {
+    position: relative;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: relative;
+    /* background-color: #f1f1f1; */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: hsl(200, 4%, 11%);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: hsla(176, 46.3%, 57.6%, 0.7)}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+  /* -----------------Languages Section------------------- */
+
+  .main_lang {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .lang-title {
+      letter-spacing: 3px;
+  }
+
+  .line {
+      background-color: hsl(200, 4%, 11%);
+      height: 5px;
+      width: 200px;
+  }
+
+  .lang-list ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 70px;
+  }
+  .lang-list li {
+      list-style: none;
+      flex-direction: column;
+  }
+
+  .lang-list a{
+    color: hsl(200, 4%, 11%);
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* --------HomePage--------- */
+
+  .main_homepage {
+    height: 600px;
+  }
+
+  .banner_homepage {
+    padding-top: 10%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .banner_homepage h1, p{
+    margin: 10px 50px;
+  }
+
+  .banner_image img{
+    height: 100%;
+    width: 100%;
+  }

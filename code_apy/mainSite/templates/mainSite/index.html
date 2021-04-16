@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{% load static %}
-
-    
+    {%load static%}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'mainSite/index.css' %}">
-    <title>Re-EnCode</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mainSite/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Code-apy</title>
 </head>
 <body>
     <header>
-        <h1 class="site-name">Re-EnCode</h1>
-        <nav>
-            <ul class="nav-items">
-                <li><a href="#">Languages</a></li>
-                <li><a href="#">Cheat Sheet</a></li>
-                <li><a href="#">Practice</a></li>
-                <li><a href="#"></a></li>
-            </ul>
+        <h1 class="site-name">Code-<span>apy</span></h1>
+        <nav class="nav-items">
+            <span><a href="/languages">Languages</a></span>
+            <span><a href="/cheatsheet">Cheat Sheet</a></span>
+            <span class="about"><a href="#">About</a></span>
         </nav>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>
-    {% if modules_list %}
-    <ul>
-    {% for module in modules_list %}
-        <li><a href="/home/{{ module.module_number }}/">{{ module.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No modules are available.</p>
-{% endif %}
+    <div class="main main_homepage">
+        <div class="banner_homepage">
+            <h1>Confused on basic programming concepts?</h1>
+            <p>We have explanations on basic C++, Java, and Python concepts!</p>
+        </div>
+        <div class="banner_image">
+            <img src="{% static 'mainSite/images/homepage_g.png' %}">
+        </div>
     </div>
-    
-    
+
+    <!-- <div>
+        {% if modules_list %}
+        <ul>
+        {% for module in modules_list %}
+            <li><a href="/home/{{ module.module_number }}/">{{ module.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No modules are available.</p>
+    {% endif %}
+        </div> -->
 </body>
 </html>
+

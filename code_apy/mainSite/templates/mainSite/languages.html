@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainSite/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Code-apy</title>
+</head>
+<body>
+    <script src="index.js"></script>
+    <header>
+        <h1 class="site-name">Code-<span>apy</span></h1>
+        <nav class="nav-items">
+            <span><a href="/home">Home</a></span>
+            <span class="lang"><a href="/languages">Languages</a></span>
+            <span class="cs"><a href="/cheatsheet">Cheat Sheet</a></span>
+            <span class="about"><a href="#">About</a></span>
+        </nav>
+    </header>
+    <div class="main main_lang">
+        <h1 class="lang-title">Languages</h1>
+        <div class="line"></div>
+    </div>
+
+    <div class="lang-list">
+        <ul>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Python</a></li>
+        </ul>
+    </div>
+</body>
+</html>

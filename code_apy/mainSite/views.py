@@ -15,3 +15,9 @@ def module(request,module_id):
 def lesson(request, lesson_id):
     response = "You're looking at the results of question %s."
     return HttpResponse(response % question_id)
+
+def languages(request):
+    return render(request, template_name='mainSite/languages.html')
+
+def cheatsheet(request):
+    return render(request, template_name='mainSite/cheatsheet.html')

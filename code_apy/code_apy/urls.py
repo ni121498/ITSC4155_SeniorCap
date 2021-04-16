@@ -20,4 +20,6 @@ urlpatterns = [
     path('', include('mainSite.urls')),
     path('home/', include('mainSite.urls')),
     path('admin/', admin.site.urls),
+    path('languages/', include('mainSite.urls')),
+    path('cheatsheet/', include('mainSite.urls')),
 ]
