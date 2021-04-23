@@ -10,10 +10,11 @@ class Module(models.Model):
     
 class Lesson(models.Model):
     
-    # lesson_text = models.TextField()
+    
     lesson_code_text = models.TextField()
     lesson_psudo_code = models.TextField()
     lesson_plain_text = models.TextField()
+    lesson_text = models.TextField(default="no lesson text")
     
     needs_psudo = models.BooleanField()
     module = models.ForeignKey(Module, on_delete=models.CASCADE)
