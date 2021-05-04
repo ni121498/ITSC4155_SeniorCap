@@ -31,11 +31,15 @@
     </div>
 
     <div class="lang-list">
+        {% if modules_list %}
         <ul>
-            <li><a href="#">C++</a></li>
-            <li><a href="#">Java</a></li>
-            <li><a href="#">Python</a></li>
+        {% for module in modules_list %}
+            <li><a href="/languages/{{ module.title }}/">{{ module.title }}</a></li>
+        {% endfor %}
         </ul>
+    {% else %}
+        <p>No modules are available.</p>
+    {% endif %}
     </div>
 </body>
 </html>

@@ -7,7 +7,7 @@ from .models import Lesson, Module
 
 class LessonInline(admin.StackedInline):
     model = Lesson
-    extra = 3
+    extra = 0
 
 
 class ModuleAdmin(admin.ModelAdmin):

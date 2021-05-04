@@ -5,9 +5,9 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     # ex: /home/5/
-    path('<int:module_id>/', views.module, name='detail'),
+    path('languages/<str:title>/', views.module, name='detail'),
     # ex: /home/5/lesson/
-    path('<int:module_id>/int:lesson_id/', views.lesson, name='results'),
+    path('languages/<str:title>/str:lesson_title/', views.lesson, name='results'),
 
     path('languages/', views.languages, name='languages'),
 
