@@ -12,15 +12,16 @@ def index(request):
      context = {'modules_list': modules_list}
      return render(request, 'mainSite/index.html', context)
  
-def module(request,title):
+def module(request, title):
     module = get_object_or_404(Module, title = title)
     return render(request, 'mainSite/modules.html', {'module': module})
     #return render(request, 'mainSite/index.html', context)
     #return HttpResponse("You're looking at module %s." % module_id)
 
-def lesson(request, lesson_title):
+def lesson(request, title, lesson_title):
     lesson = get_object_or_404(Lesson, lesson_title = lesson_title)
-    return render(request, 'mainSite/lesson.html', {'lesson': lesson})
+    module = get_object_or_404(Module, title = title)
+    return render(request, 'mainSite/lesson.html', {'lesson': lesson, 'module' : module})
 
 def languages(request):
     modules_list = Module.objects.order_by('-module_number')[0:]
@@ -30,7 +31,12 @@ def languages(request):
 def cheatsheet(request):
     return render(request, template_name='mainSite/cheatsheet.html')
 
+# def cheatsheet_java(request):
+#     return render(request, template_name='mainSite/cheatsheet_java.html')
+
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
+    
+    

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+{%load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'mainSite/styles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'mainSite/prism.css' %}">
+</head>
+<body>
+<h1> {{ lesson.lesson_title }} </h1>
+	<script src="{% static 'mainSite/prism.js' %}"></script>
+	<section class="sec_container">
+	<section class="sec" >
+	<pre class="square">
+    	<code class="language-{{module.title}}">
+        	{{lesson.lesson_code_text}}
+        </code>
+    </pre>
+</section>
+<section class="sec">
+    <pre class="square">
+        <code class="language-{{module.title}}">
+            {{lesson.lesson_psudo_code}}
+        </code>
+    </pre>
+</section>
+<section class="sec">
+    <pre class="square">
+        <code class="language-plain">
+            {{lesson.lesson_plain_text}}
+        </code>
+    </pre>
+    <p>
+   {{ lesson.lesson_plain_text}}
+    </p>
+</section>
+</section>
+</body>
+</html>
