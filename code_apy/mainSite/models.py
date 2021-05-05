@@ -5,6 +5,7 @@ from django.db import models
 class Module(models.Model):
     
     title = models.CharField(max_length=200)
+    language = models.CharField(max_length=200, default = "none")
     module_number = models.IntegerField(default=0)
     def __str__(self):
         return self.title

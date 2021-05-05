@@ -14,6 +14,7 @@ class ModuleAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['title']}),
         ('Module Number', {'fields': ['module_number']}),
+        ('Language', {'fields' : ['language']})
     ]
     inlines = [LessonInline]
 
