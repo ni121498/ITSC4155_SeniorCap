@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
-    background-color: hsl(187, 100%, 93%);
     padding: 0;
     margin: 0;
 }
 
 /* ----------navigation section------------ */
+body {
+    background-color: hsl(187, 100%, 93%);
+}
+
 header,
 .site-name,
 .site-name span,
@@ -96,7 +99,16 @@ header {
     }
 }
 
-/* -------------Cheat Sheet-------------- */
+/* ------------- Larger Screens ------------------- */
+@media screen and (min-width: 2000px) {
+    .main {
+        padding-top: 5%;
+    }
+}
+
+
+
+/* ------------- Cheat Sheet Section -------------- */
 
 .cs-title {
     letter-spacing: 3px;
@@ -153,14 +165,14 @@ header {
   .show {display:block;}
 
 
-  /* -----------------Languages Section------------------- */
+  /* -----------------Languages/Modules Section------------------- */
 
-  .main_lang {
+  .main_list {
       flex-direction: column;
       align-items: center;
   }
 
-  .lang-title {
+  .list_title {
       letter-spacing: 3px;
   }
 
@@ -170,25 +182,30 @@ header {
       width: 200px;
   }
 
-  .lang-list ul {
+  .list ul {
       display: flex;
       flex-direction: column;
       align-items: center;
       line-height: 70px;
   }
-  .lang-list li {
+  .list li {
       list-style: none;
       flex-direction: column;
+      margin-top: 20px;
   }
 
-  .lang-list a{
+  .list li :hover {
+    color: hsla(200, 4%, 11%, 0.7);
+  }
+
+  .list a{
     color: hsl(200, 4%, 11%);
     text-decoration: none;
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
   }
 
-  /* --------HomePage--------- */
+  /* -------- HomePage Section--------- */
 
   .main_homepage {
     height: 600px;
@@ -215,7 +232,7 @@ header {
     width: 100%;
   }
 
-  /* --------------Login---------------- */
+  /* -------------- Login Section ---------------- */
 
   .login_form {
     display: flex;
@@ -235,4 +252,15 @@ header {
       padding: 5px;
       background-color: hsl(200, 4%, 11%);
       color: hsl(176, 46.3%, 57.6%);
+  }
+
+
+  /* -------------- Lessons Section ---------------- */
+
+  .main_lesson {
+      display: flex;
+  }
+
+  .prism_container h2 {
+    font-family: 'Poppins', sans-serif;
   }

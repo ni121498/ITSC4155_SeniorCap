@@ -25,31 +25,19 @@
                     </span>
         </nav>
     </header>
-    <div class="main main_homepage">
-        <div class="banner_homepage">
-        {% if user.is_authenticated %}
-                       <h1>Hi {{ user.username }}!</h1>
-                      {% else %}
-                    <h1>Confused on basic programming concepts?</h1>
-            <p>We have explanations on basic C++, Java, and Python concepts!</p>
-                       
-                    {% endif %}
-     
-        </div>
-        <div class="banner_image">
-            <img src="{% static 'mainSite/images/homepage_g.png' %}">
-        </div>
+    
+    <div class="main main_list">
+        <h1 class="list_title">{{ module.title }}</h1>
+        <div class="line"></div>
     </div>
     
-
-     <div>
-     <h1>{{ module.title }}</h1>
+    <div class="list">
         <ul>
-        {% for lesson in module.lesson_set.all %}
-            <li><a href="/languages/{{ module.title }}/{{ lesson.lesson_title }}/">{{ lesson.lesson_title }}</a></li>
-        {% endfor %}
+            {% for lesson in module.lesson_set.all %}
+            <li class="lesson"><a href="/languages/{{ module.title }}/{{ lesson.lesson_title }}/">{{ lesson.lesson_title }}</a></li>
+            {% endfor %}
         </ul>
-        </div>
+    </div>
 </body>
 </html>
 
