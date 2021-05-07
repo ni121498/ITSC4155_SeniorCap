@@ -21,3 +21,15 @@ class Lesson(models.Model):
     module = models.ForeignKey(Module, on_delete=models.CASCADE)
     def __str__(self):
         return self.lesson_title
+    
+class Cheatsheet(models.Model):
+    language = models.CharField(max_length=200)
+    def __str__(self):
+        return self.language
+    
+class Block(models.Model):
+    block_title = models.CharField(max_length=200)
+    block_content = models.TextField()
+    cheatsheet = models.ForeignKey(Cheatsheet, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.block_title
