@@ -80,13 +80,29 @@ header {
 
 /* -------------------mobile------------------- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1500px) {
     .main {
         padding-top: 10%;
     }
 
-    .main_homepage {
+    .banner_homepage {
         flex-wrap: wrap;
+    }
+
+    .web-descriptions .head {
+      width: 40%;
+      height: 60%;
+    }
+  
+    .web-descriptions .threeWay {
+      width: 40%;
+      height: 60%;
+    }
+  
+    .web-descriptions .bridge {
+      width: 40%;
+      height: 60%;
+  
     }
 }
 
@@ -95,8 +111,24 @@ header {
         padding-top: 20%;
     }
 
-    .main_homepage {
+    .banner_homepage {
         flex-wrap: wrap;
+    }
+
+    .web-descriptions .head {
+      width: 55%;
+      height: 70%;
+    }
+  
+    .web-descriptions .threeWay {
+      width: 55%;
+      height: 70%;
+    }
+  
+    .web-descriptions .bridge {
+      width: 55%;
+      height: 70%;
+  
     }
 
 }
@@ -243,22 +275,22 @@ header {
     align-items: center;
   }
 
-  #head {
+  .head {
     width: 20%;
     height: 40%;
   }
 
-  #threeWay {
+  .threeWay {
     width: 20%;
     height: 40%;
   }
 
-  #bridge {
+  .bridge {
     width: 20%;
     height: 40%;
 
   }
-  
+
   /* -------------- Login Section ---------------- */
 
   .login_form {
