@@ -212,7 +212,7 @@ header {
   }
 
   .line {
-      background-color: hsl(200, 4%, 11%);
+      background-color:hsl(257, 80%, 54%);
       height: 5px;
       width: 200px;
   }
@@ -300,8 +300,16 @@ header {
     line-height: 40px;
   }
 
-  .login-form h2 {
+  .login_form h2 {
       color: hsl(200, 4%, 11%);
+  }
+
+  .login_form .line {
+    width: 150px;
+  }
+
+  .login_form form {
+    padding: 20px;
   }
 
   .login_btn {
@@ -311,6 +319,20 @@ header {
       padding: 5px;
       background-color: hsl(200, 4%, 11%);
       color: hsl(176, 46.3%, 57.6%);
+  }
+
+  .login_form button {
+    padding: 5px;
+    margin-top: 5%;
+    width: 20%;
+    background-color:hsl(257, 80%, 54%);
+    color: hsl(257, 80%, 90%);
+    border-radius: 10px;
+  }
+
+  .login_form button:hover {
+    background-color: hsl(257, 80%, 90%);
+    color: hsl(257, 80%, 54%);
   }
 
 
@@ -323,7 +345,50 @@ header {
   .prism_container h2 {
     font-family: 'Poppins', sans-serif;
   }
-.c_image img {
+  .c_image img {
     margin: 1px auto;
     display: block;
+  }
+  
+  .line_lesson {
+    background-color:hsl(257, 80%, 54%);
+    height: 5px;
+    width: 50%;
+  }
+
+/* -------------- Sign Up Section ---------------- */
+
+.main_register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reg_form form{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.reg_form ul {
+  margin-left: 25%;
+  list-style: none;
+}
+
+.reg_form button {
+  padding: 5px;
+  margin-left: 45%;
+  width: 100px;
+  margin-top: 5%;
+  background-color:hsl(257, 80%, 54%);
+  color: hsl(257, 80%, 90%);
+  border-radius: 10px;
+}
+
+.reg_form button:hover {
+  background-color: hsl(257, 80%, 90%);
+  color: hsl(257, 80%, 54%);
 }

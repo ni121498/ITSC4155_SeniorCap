@@ -17,12 +17,18 @@
         <nav class="nav-items">
             <span class="lang"><a href="/languages">Languages</a></span>
             <span class="cs"><a href="/cheatsheet">Cheat Sheet</a></span>
-            <span class="about"><a href="#">About</a></span>
+            {% if user.is_authenticated %}
+            <span><a href="{% url 'logout' %}">Log Out</a></span>
+                    {% else %}
+                         <span><a href="{% url 'login' %}">Log In</a></span>
+                         <span><a href="/accounts/signup">Sign up</a></span>
+                    {% endif %}
         </nav>
     </header>
     <div class="main main_login">
         <div class="login_form">
             <h2>Log In</h2>
+            <div class="line"></div>
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
