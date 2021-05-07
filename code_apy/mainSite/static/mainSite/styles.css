@@ -16,7 +16,7 @@ header,
 .nav-items,
 .nav-items span,
 .nav-items a {
-    background-color: hsl(176, 46.3%, 57.6%);
+    background-color: hsl(176, 46%, 58%);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -117,7 +117,7 @@ header {
 /* Dropdown Button */
 .dropbtn {
     background-color: hsl(200, 4%, 11%);
-    color: hsl(176, 46.3%, 57.6%);
+    color: hsl(176, 46%, 58%);
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -127,7 +127,7 @@ header {
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    background-color: hsl(176, 46.3%, 57.6%);
+    background-color: hsl(176, 46%, 58%);
     color: hsl(200, 4%, 11%);
   }
   
@@ -159,7 +159,8 @@ header {
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: hsla(176, 46.3%, 57.6%, 0.7)}
+  .dropdown-content a:hover {background-color: hsla(176, 46%, 58%, 0.7)
+  }
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
@@ -264,3 +265,7 @@ header {
   .prism_container h2 {
     font-family: 'Poppins', sans-serif;
   }
+.c_image img {
+    margin: 1px auto;
+    display: block;
+}
