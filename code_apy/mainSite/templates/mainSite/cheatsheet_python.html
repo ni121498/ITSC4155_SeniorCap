@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainSite/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Code-apy</title>
+</head>
+<h1></h1>
+<body>
+    <script src="{% static 'mainSite/script.js' %}"></script>
+    <header>
+        <h1 class="site-name"><a href="/home">Code-<span>apy</span></a></h1>
+        <nav class="nav-items">
+            <span class="lang"><a href="/languages">Languages</a></span>
+            <span class="cs"><a href="/cheatsheet">Cheat Sheet</a></span>
+            <span>{% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Log Out</a>
+              {% else %}
+                   <a href="{% url 'login' %}">Log In</a>
+              {% endif %}
+              </span>
+        </nav>
+    </header>
+    <div class="main">
+        <h1 class="cs-title">PYTHON Cheat Sheet</h1>
+
+    </div>
+    <p><br /></p>
+    <div class="c_image">
+        <img src="{% static 'mainSite/images/PYTHON.png' %}">
+    </div>
+
+
+</body>
+</html>
