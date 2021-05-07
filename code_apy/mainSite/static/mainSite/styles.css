@@ -80,13 +80,29 @@ header {
 
 /* -------------------mobile------------------- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1500px) {
     .main {
         padding-top: 10%;
     }
 
-    .main_homepage {
+    .banner_homepage {
         flex-wrap: wrap;
+    }
+
+    .web-descriptions .head {
+      width: 40%;
+      height: 60%;
+    }
+  
+    .web-descriptions .threeWay {
+      width: 40%;
+      height: 60%;
+    }
+  
+    .web-descriptions .bridge {
+      width: 40%;
+      height: 60%;
+  
     }
 }
 
@@ -95,8 +111,24 @@ header {
         padding-top: 20%;
     }
 
-    .main_homepage {
+    .banner_homepage {
         flex-wrap: wrap;
+    }
+
+    .web-descriptions .head {
+      width: 55%;
+      height: 70%;
+    }
+  
+    .web-descriptions .threeWay {
+      width: 55%;
+      height: 70%;
+    }
+  
+    .web-descriptions .bridge {
+      width: 55%;
+      height: 70%;
+  
     }
 
 }
@@ -211,13 +243,15 @@ header {
   /* -------- HomePage Section--------- */
 
   .main_homepage {
-    height: 600px;
+    display: flex;
+    flex-direction: column;
   }
 
   .banner_homepage {
-    padding-top: 10%;
+    display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .banner_homepage h1, p{
@@ -229,57 +263,33 @@ header {
     overflow: hidden;
   }
 
-
-
-  #main_element {
-    height:100%;
-    width:80%;
+  .main_element {
+    max-width: 810px;
+    height: 100%;
+    width: 100%;
   }
 
   .web-descriptions {
-    height:50%;
-    width:70%
-    vertical-align: left;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  #head {
-    height:200px;
-    width:350px;
-    display: block;
-    margin: 0 auto;
+  .head {
+    width: 20%;
+    height: 40%;
   }
 
-  #threeWay {
-    height:200px;
-    width:350px;
-    display: block;
-    margin: 0 auto;
+  .threeWay {
+    width: 20%;
+    height: 40%;
   }
 
-  #bridge {
-    height:200px;
-    width:350px;
-    display: block;
-    margin: 0 auto;
+  .bridge {
+    width: 20%;
+    height: 40%;
 
   }
-
-
-    /*.banner_image img{
-        max-width: 810px;
-        height: 100%;
-        width: 100%;
-    }
-    #head{
-        height:250px;
-        width:375px;
-    }
-
-    #threeWay{
-        height:250px;
-        width:250px;
-  }*/
 
   /* -------------- Login Section ---------------- */
 
