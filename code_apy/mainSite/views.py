@@ -31,6 +31,15 @@ def languages(request):
 def cheatsheet(request):
     return render(request, template_name='mainSite/cheatsheet.html')
 
+def cheatsheet_c(request):
+    return render(request, template_name='mainSite/cheatsheet_c.html')
+
+def cheatsheet_java(request):
+    return render(request, template_name='mainSite/cheatsheet_java.html')
+
+def cheatsheet_python(request):
+        return render(request, template_name='mainSite/cheatsheet_python.html')
+
 # def cheatsheet_java(request):
 #     return render(request, template_name='mainSite/cheatsheet_java.html')
 
