@@ -77,6 +77,7 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
+
 /* -------------------mobile------------------- */
 
 @media screen and (max-width: 1024px) {
@@ -97,6 +98,7 @@ header {
     .main_homepage {
         flex-wrap: wrap;
     }
+
 }
 
 /* ------------- Larger Screens ------------------- */
@@ -227,11 +229,57 @@ header {
     overflow: hidden;
   }
 
-  .banner_image img{
-    max-width: 810px;
-    height: 100%;
-    width: 100%;
+
+
+  #main_element {
+    height:100%;
+    width:80%;
   }
+
+  .web-descriptions {
+    height:50%;
+    width:70%
+    vertical-align: left;
+
+  }
+
+  #head {
+    height:200px;
+    width:350px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #threeWay {
+    height:200px;
+    width:350px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #bridge {
+    height:200px;
+    width:350px;
+    display: block;
+    margin: 0 auto;
+
+  }
+
+
+    /*.banner_image img{
+        max-width: 810px;
+        height: 100%;
+        width: 100%;
+    }
+    #head{
+        height:250px;
+        width:375px;
+    }
+
+    #threeWay{
+        height:250px;
+        width:250px;
+  }*/
 
   /* -------------- Login Section ---------------- */
 
