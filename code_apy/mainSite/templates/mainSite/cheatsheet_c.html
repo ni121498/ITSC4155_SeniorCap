@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'mainSite/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainSite/prism.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Code-apy</title>
@@ -17,7 +18,7 @@
         <h1 class="site-name"><a href="/home">Code-<span>apy</span></a></h1>
         <nav class="nav-items">
             <span class="lang"><a href="/languages">Languages</a></span>
-            <span class="cs"><a href="/cheatsheet">Cheat Sheet</a></span>
+            <span class="cs"><a href="/cheatsheet">Cheatsheet</a></span>
             <span>{% if user.is_authenticated %}
                 <a href="{% url 'logout' %}">Log Out</a>
               {% else %}
@@ -27,12 +28,36 @@
         </nav>
     </header>
     <div class="main">
-        <h1 class="cs-title">C++ Cheat Sheet</h1>
+        <h1 class="cs-title">{{cheatsheet.language}}</h1>
+        <div class="dropdown">
+        <button onclick="dpFunction()" class="dropbtn">Choose a Language</button>
+        <div id="langDropdown" class="dropdown-content">
+            {% if cheatsheet_list %}
+        
+        {% for cheatsheet in cheatsheet_list %}
+            <a href="/cheatsheet/{{ cheatsheet.language }}/">{{ cheatsheet.language }}</a>
+        {% endfor %}
+        
+    {% else %}
+        <p>No Cheatsheets are available.</p>
+    {% endif %}
+        </div>
+    </div>
 
     </div>
     <p><br /></p>
     <div class="c_image">
-        <img src="{% static 'mainSite/images/C++.png' %}">
+    <script src="{% static 'mainSite/prism.js' %}"></script>
+         {% for block in cheatsheet.block_set.all %}
+            <section class="prism_container">
+                <h2>{{block.block_title}}</h2>
+                <section class="sec">
+                    <pre class="square_code">
+            	    <code class="language-none">{{block.block_content}}</code>
+                    </pre>
+                </section>
+            </section>
+            {% endfor %}
     </div>
 
 

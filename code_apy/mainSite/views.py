@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 
 from django.http import HttpResponse
-from .models import Module, Lesson
+from .models import Module, Lesson, Cheatsheet, Block
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
@@ -29,10 +29,15 @@ def languages(request):
     return render(request, 'mainSite/languages.html', context)
 
 def cheatsheet(request):
-    return render(request, template_name='mainSite/cheatsheet.html')
+    cheatsheet_list = Cheatsheet.objects.order_by('-language')[0:]
+    context = {'cheatsheet_list': cheatsheet_list}
+    return render(request, 'mainSite/cheatsheet.html', context)
 
-def cheatsheet_c(request):
-    return render(request, template_name='mainSite/cheatsheet_c.html')
+def cheatsheet_c(request, language):
+    cheatsheet = get_object_or_404(Cheatsheet, language = language)
+    cheatsheet_list = Cheatsheet.objects.order_by('-language')[0:]
+    context = {'cheatsheet_list': cheatsheet_list, 'cheatsheet': cheatsheet}
+    return render(request, 'mainSite/cheatsheet_c.html', context)
 
 def cheatsheet_java(request):
     return render(request, template_name='mainSite/cheatsheet_java.html')

@@ -32,9 +32,15 @@
     <div class="dropdown">
         <button onclick="dpFunction()" class="dropbtn">Choose a Language</button>
         <div id="langDropdown" class="dropdown-content">
-            <a href="/cheatsheet/cheatsheet_c">C++</a>
-            <a href="/cheatsheet/cheatsheet_java">Java</a>
-            <a href="/cheatsheet/cheatsheet_python">Python</a>
+            {% if cheatsheet_list %}
+        
+        {% for cheatsheet in cheatsheet_list %}
+            <a href="/cheatsheet/{{ cheatsheet.language }}/">{{ cheatsheet.language }}</a>
+        {% endfor %}
+        
+    {% else %}
+        <p>No Cheatsheets are available.</p>
+    {% endif %}
         </div>
     </div>
 </body>

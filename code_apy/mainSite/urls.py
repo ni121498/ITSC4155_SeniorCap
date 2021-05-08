@@ -10,9 +10,10 @@ urlpatterns = [
     # ex: /languages/title/lesson_title/
     path('languages/<str:title>/<str:lesson_title>/', views.lesson, name='lesson'),
     path('cheatsheet/', views.cheatsheet, name='cheatsheet'),
+    path('cheatsheet/<str:language>/', views.cheatsheet_c, name='cheatsheet'),
     path('signup/', views.SignUpView.as_view(), name='signup'),
 
-    path('cheatsheet_c', views.cheatsheet_c, name='cheatsheet_c'),
-        path('cheatsheet_java', views.cheatsheet_java, name='cheatsheet_java'),
-        path('cheatsheet_python', views.cheatsheet_python, name='cheatsheet_python'),
+    # path('cheatsheet_c', views.cheatsheet_c, name='cheatsheet_c'),
+    #     path('cheatsheet_java', views.cheatsheet_java, name='cheatsheet_java'),
+    #     path('cheatsheet_python', views.cheatsheet_python, name='cheatsheet_python'),
     ]
