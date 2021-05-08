@@ -18,6 +18,7 @@ class Lesson(models.Model):
     lesson_psudo_code = models.TextField()
     lesson_plain_text = models.TextField()
     needs_psudo = models.BooleanField()
+    difficulty_level = models.CharField(max_length=200, default = "easy")
     module = models.ForeignKey(Module, on_delete=models.CASCADE)
     def __str__(self):
         return self.lesson_title
