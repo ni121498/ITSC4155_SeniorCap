@@ -11,6 +11,7 @@
     <header>
         <h1 class="site-name"><a href="/home">Code-<span>apy</span></a></h1>
         <nav class="nav-items">
+            <span class="lang"><a href="/languages/{{ module.title }}/">{{ module.title }}</a></span>
             <span class="lang"><a href="/languages">Languages</a></span>
             <span class="cs"><a href="/cheatsheet">Cheat Sheet</a></span>
             {% if user.is_authenticated %}
@@ -25,6 +26,7 @@
     <div class="main main_list">
         <h1 class="list_title"> {{ lesson.lesson_title }} </h1>
         <div class="line_lesson"></div>
+        <h3>Difficulty Level: {{lesson.difficulty_level}}</h3>
     </div>
 
     <div class="main_lesson">
