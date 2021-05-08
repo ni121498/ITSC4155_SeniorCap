@@ -27,9 +27,12 @@
               </span>
         </nav>
     </header>
+
     <div class="main">
         <h1 class="cs-title">{{cheatsheet.language}}</h1>
-        <div class="dropdown">
+    </div>
+
+    <div class="dropdown">
         <button onclick="dpFunction()" class="dropbtn">Choose a Language</button>
         <div id="langDropdown" class="dropdown-content">
             {% if cheatsheet_list %}
@@ -44,9 +47,8 @@
         </div>
     </div>
 
-    </div>
     <p><br /></p>
-    <div class="c_image">
+    <div class="main_cheatsheet">
     <script src="{% static 'mainSite/prism.js' %}"></script>
          {% for block in cheatsheet.block_set.all %}
             <section class="prism_container">
