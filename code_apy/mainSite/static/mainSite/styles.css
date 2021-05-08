@@ -240,6 +240,8 @@ header {
     font-family: 'Poppins', sans-serif;
   }
 
+  
+
   /* -------- HomePage Section--------- */
 
   .main_homepage {
@@ -288,9 +290,30 @@ header {
   .bridge {
     width: 20%;
     height: 40%;
-
   }
 
+  .list_homepage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #homepage_prompt {
+    margin-top: 5%;
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hand_img {
+    width: 8%;
+  }
   /* -------------- Login Section ---------------- */
 
   .login_form {

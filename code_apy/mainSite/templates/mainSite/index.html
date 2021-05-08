@@ -28,7 +28,24 @@
         <div class="banner_homepage">
             <div class="banner_statement">
                 {% if user.is_authenticated %}
-                    <h1>Hi {{ user.username }}!</h1>
+                    <div class="list_homepage">
+                        <div class="greeting">
+                            <img class="hand_img" src="{% static 'mainSite/images/hand.png' %}">
+                            <h1 class= "list_title">Hi {{ user.username }}, Lets get started!</h1>
+                        </div>
+                        <h2 class="list_title" id="homepage_prompt">Please choose from one of these languages:</h2>
+                        <div class="list">
+                            {% if modules_list %}
+                            <ul>
+                            {% for module in modules_list %}
+                                <li><a href="/languages/{{ module.title }}/">{{ module.title }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p>No modules are available.</p>
+                        {% endif %}
+                        </div>
+                    </div>
                       {% else %}
                     <h1>Confused on basic programming concepts?</h1>
                 <p>We have explanations on basic C++, Java, and Python concepts!</p>
