@@ -335,6 +335,10 @@ header {
     color: hsl(257, 80%, 54%);
   }
 
+  .key_img {
+    width: 250px;
+  }
+
 
   /* -------------- Lessons Section ---------------- */
 
